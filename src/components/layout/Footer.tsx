@@ -5,22 +5,20 @@ const footerLinks = {
   services: [
     { name: "VAPT Services", href: "/services#vapt" },
     { name: "Digital Forensics", href: "/services#forensics" },
-    { name: "Incident Response", href: "/services#incident-response" },
     { name: "Data Recovery", href: "/services#data-recovery" },
     { name: "Compliance Consulting", href: "/services#compliance" },
+    { name: "Threat Hunting", href: "/services#threat-hunting" },
   ],
   company: [
     { name: "About Us", href: "/about" },
     { name: "Case Studies", href: "/case-studies" },
     { name: "Blog", href: "/blog" },
-    { name: "Careers", href: "/careers" },
     { name: "Contact", href: "/contact" },
   ],
-  resources: [
-    { name: "Security Resources", href: "/resources" },
-    { name: "Threat Intelligence", href: "/threat-intelligence" },
-    { name: "Whitepapers", href: "/whitepapers" },
-    { name: "FAQs", href: "/faq" },
+  quickLinks: [
+    { name: "Get Security Assessment", href: "/contact" },
+    { name: "Emergency Response", href: "/contact" },
+    { name: "All Services", href: "/services" },
   ],
 };
 
@@ -120,11 +118,11 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Resources */}
+          {/* Quick Links */}
           <div>
-            <h4 className="text-foreground font-semibold mb-4">Resources</h4>
+            <h4 className="text-foreground font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-3">
-              {footerLinks.resources.map((link) => (
+              {footerLinks.quickLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.href}
@@ -155,9 +153,7 @@ export function Footer() {
         {/* Copyright */}
         <div className="text-center pt-8 border-t border-border">
           <p className="text-muted-foreground text-sm">
-            © {new Date().getFullYear()} Ironcept. All rights reserved. |{" "}
-            <Link to="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link> |{" "}
-            <Link to="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>
+            © {new Date().getFullYear()} Ironcept. All rights reserved.
           </p>
         </div>
       </div>
