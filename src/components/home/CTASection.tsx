@@ -38,7 +38,7 @@ export function CTASection() {
               </Link>
             </Button>
             <Button variant="cyber-outline" size="xl" asChild>
-              <a href="tel:+1234567890">
+              <a href="tel:+971556022188">
                 <Phone className="w-5 h-5 mr-2" />
                 Call Us Now
               </a>
@@ -47,14 +47,14 @@ export function CTASection() {
 
           {/* Contact Info */}
           <div className="flex flex-wrap items-center justify-center gap-6 text-muted-foreground">
-            <a href="mailto:security@ironcept.com" className="flex items-center gap-2 hover:text-primary transition-colors">
+            <a href="mailto:info@ironcept.com" className="flex items-center gap-2 hover:text-primary transition-colors">
               <Mail className="w-4 h-4" />
-              <span>security@ironcept.com</span>
+              <span>info@ironcept.com</span>
             </a>
             <span className="hidden sm:block">|</span>
-            <a href="tel:+1234567890" className="flex items-center gap-2 hover:text-primary transition-colors">
+            <a href="tel:+971556022188" className="flex items-center gap-2 hover:text-primary transition-colors">
               <Phone className="w-4 h-4" />
-              <span>+1 (234) 567-890</span>
+              <span>+971 556022188</span>
             </a>
           </div>
         </div>
