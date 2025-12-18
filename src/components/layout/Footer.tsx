@@ -22,12 +22,6 @@ const footerLinks = {
   ],
 };
 
-const certifications = [
-  "ISO 27001",
-  "CREST",
-  "PCI-DSS",
-  "SOC 2",
-];
 
 export function Footer() {
   return (
@@ -56,9 +50,9 @@ export function Footer() {
                 <Mail className="w-4 h-4" />
                 <span>info@ironcept.com</span>
               </a>
-              <a href="tel:+1234567890" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
+              <a href="tel:+971556022188" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
                 <Phone className="w-4 h-4" />
-                <span>+1 (234) 567-890</span>
+                <span>+971 556022188</span>
               </a>
               <div className="flex items-center gap-3 text-muted-foreground">
                 <MapPin className="w-4 h-4" />
@@ -136,19 +130,6 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Certifications */}
-        <div className="mt-12 pt-8 border-t border-border">
-          <div className="flex flex-wrap items-center justify-center gap-6 mb-8">
-            {certifications.map((cert) => (
-              <div
-                key={cert}
-                className="px-4 py-2 rounded-lg bg-muted/30 border border-border text-sm text-muted-foreground"
-              >
-                {cert} Certified
-              </div>
-            ))}
-          </div>
-        </div>
 
         {/* Copyright */}
         <div className="text-center pt-8 border-t border-border">

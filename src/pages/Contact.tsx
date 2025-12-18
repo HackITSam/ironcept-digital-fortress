@@ -13,14 +13,14 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email Us",
-    value: "security@ironcept.com",
-    link: "mailto:security@ironcept.com",
+    value: "info@ironcept.com",
+    link: "mailto:info@ironcept.com",
   },
   {
     icon: Phone,
     title: "Call Us",
-    value: "+1 (234) 567-890",
-    link: "tel:+1234567890",
+    value: "+971 556022188",
+    link: "tel:+971556022188",
   },
   {
     icon: MapPin,
@@ -188,7 +188,7 @@ const Contact = () => {
                       type="tel"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      placeholder="+1 (234) 567-890"
+                      placeholder="+971 556022188"
                       className="bg-background"
                     />
                   </div>
@@ -255,7 +255,7 @@ const Contact = () => {
                   response team is ready to help.
                 </p>
                 <Button variant="destructive" size="lg" className="w-full" asChild>
-                  <a href="tel:+1234567890">
+                  <a href="tel:+971556022188">
                     <Phone className="w-4 h-4 mr-2" />
                     Emergency Hotline
                   </a>
@@ -270,7 +270,7 @@ const Contact = () => {
                 </p>
                 <Button variant="glow" size="lg" className="w-full" asChild>
                   <a 
-                    href="https://wa.me/1234567890" 
+                    href="https://wa.me/971556022188" 
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
