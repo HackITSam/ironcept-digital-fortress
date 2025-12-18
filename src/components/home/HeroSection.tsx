@@ -5,10 +5,10 @@ import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-cybersecurity.jpg";
 
 const securityBadges = [
-  { icon: Lock, label: "ISO 27001" },
-  { icon: Fingerprint, label: "CREST Certified" },
-  { icon: Eye, label: "24/7 Monitoring" },
-  { icon: Server, label: "SOC 2 Compliant" },
+  { icon: Lock, label: "VAPT Experts" },
+  { icon: Fingerprint, label: "Digital Forensics" },
+  { icon: Eye, label: "Threat Hunting" },
+  { icon: Server, label: "Incident Response" },
 ];
 
 export function HeroSection() {
