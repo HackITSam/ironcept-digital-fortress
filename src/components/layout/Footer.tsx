@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { Shield, Mail, Phone, MapPin, Linkedin, Twitter, Github, ExternalLink } from "lucide-react";
+import { Shield, Mail, MapPin, Linkedin, Twitter, Github } from "lucide-react";
+import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 
 const footerLinks = {
   services: [
@@ -50,8 +51,8 @@ export function Footer() {
                 <Mail className="w-4 h-4" />
                 <span>info@ironcept.com</span>
               </a>
-              <a href="tel:+971556022188" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
-                <Phone className="w-4 h-4" />
+              <a href="https://wa.me/971556022188" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
+                <WhatsAppIcon className="w-4 h-4" />
                 <span>+971 556022188</span>
               </a>
               <div className="flex items-start gap-3 text-muted-foreground">

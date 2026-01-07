@@ -5,9 +5,10 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { 
-  Mail, Phone, MapPin, Clock, Send, 
+  Mail, MapPin, Clock, Send, 
   MessageSquare, Shield, ArrowRight 
 } from "lucide-react";
+import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 
 const contactInfo = [
   {
@@ -17,10 +18,10 @@ const contactInfo = [
     link: "mailto:info@ironcept.com",
   },
   {
-    icon: Phone,
-    title: "Call Us",
+    icon: WhatsAppIcon,
+    title: "WhatsApp Us",
     value: "+971 556022188",
-    link: "tel:+971556022188",
+    link: "https://wa.me/971556022188",
   },
   {
     icon: MapPin,
@@ -255,9 +256,9 @@ const Contact = () => {
                   response team is ready to help.
                 </p>
                 <Button variant="destructive" size="lg" className="w-full" asChild>
-                  <a href="tel:+971556022188">
-                    <Phone className="w-4 h-4 mr-2" />
-                    Emergency Hotline
+                  <a href="https://wa.me/971556022188" target="_blank" rel="noopener noreferrer">
+                    <WhatsAppIcon className="w-4 h-4 mr-2" />
+                    Emergency WhatsApp
                   </a>
                 </Button>
               </div>
