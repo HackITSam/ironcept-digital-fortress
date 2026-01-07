@@ -2,8 +2,8 @@ import { Layout } from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { 
-  Target, Eye, Heart, Shield, Users, Award, 
-  CheckCircle, ArrowRight, Linkedin, Twitter 
+  Target, Eye, Heart, Shield, 
+  CheckCircle, ArrowRight 
 } from "lucide-react";
 
 const values = [
@@ -26,29 +26,6 @@ const values = [
     icon: Target,
     title: "Innovation",
     description: "Continuously evolving our methods to stay ahead of emerging threats.",
-  },
-];
-
-const team = [
-  {
-    name: "Alex Chen",
-    role: "Chief Executive Officer",
-    bio: "20+ years in cybersecurity leadership with Fortune 500 experience.",
-  },
-  {
-    name: "Sarah Mitchell",
-    role: "Chief Technology Officer",
-    bio: "Former NSA analyst with expertise in advanced threat detection.",
-  },
-  {
-    name: "David Kumar",
-    role: "Head of Digital Forensics",
-    bio: "Leading forensic investigator with law enforcement background.",
-  },
-  {
-    name: "Maria Santos",
-    role: "Director of Consulting",
-    bio: "Compliance expert specializing in ISO, PCI-DSS, and SOC frameworks.",
   },
 ];
 
@@ -143,50 +120,6 @@ const About = () => {
                 </div>
                 <h3 className="text-xl font-semibold mb-3">{value.title}</h3>
                 <p className="text-muted-foreground text-sm">{value.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Leadership Team */}
-      <section className="py-20 relative">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 border border-primary/30 text-primary text-sm font-medium mb-4">
-              Leadership
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Meet Our <span className="gradient-text">Team</span>
-            </h2>
-            <p className="text-muted-foreground">
-              Industry veterans with decades of combined experience in cybersecurity.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {team.map((member) => (
-              <div
-                key={member.name}
-                className="p-6 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-300 group"
-              >
-                {/* Avatar Placeholder */}
-                <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center mx-auto mb-5 border-2 border-primary/30">
-                  <Users className="w-10 h-10 text-primary" />
-                </div>
-                <h3 className="text-lg font-semibold text-center mb-1">{member.name}</h3>
-                <p className="text-primary text-sm text-center mb-3">{member.role}</p>
-                <p className="text-muted-foreground text-sm text-center">{member.bio}</p>
-                
-                {/* Social Links */}
-                <div className="flex items-center justify-center gap-3 mt-4">
-                  <a href="#" className="w-8 h-8 rounded-lg bg-muted flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors">
-                    <Linkedin className="w-4 h-4" />
-                  </a>
-                  <a href="#" className="w-8 h-8 rounded-lg bg-muted flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors">
-                    <Twitter className="w-4 h-4" />
-                  </a>
-                </div>
               </div>
             ))}
           </div>
