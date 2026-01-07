@@ -25,7 +25,7 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Headquarters",
-    value: "Global Operations",
+    value: "Burj Al Salaam, Office 703/704, Sheikh Zayed Road, Dubai, UAE",
     link: null,
   },
   {
@@ -280,15 +280,17 @@ const Contact = () => {
                 </Button>
               </div>
 
-              {/* Map Placeholder */}
+              {/* Office Location */}
               <div className="aspect-square rounded-2xl bg-card border border-border overflow-hidden relative">
                 <div className="absolute inset-0 cyber-grid opacity-30" />
-                <div className="absolute inset-0 flex items-center justify-center">
+                <div className="absolute inset-0 flex items-center justify-center p-6">
                   <div className="text-center">
                     <MapPin className="w-12 h-12 text-primary mx-auto mb-4" />
-                    <h3 className="font-bold mb-2">Global Offices</h3>
+                    <h3 className="font-bold mb-2">Dubai Office</h3>
                     <p className="text-muted-foreground text-sm">
-                      Operations across North America, Europe, and Asia Pacific
+                      Burj Al Salaam, Office 703/704<br />
+                      Sheikh Zayed Road<br />
+                      Dubai, United Arab Emirates
                     </p>
                   </div>
                 </div>
