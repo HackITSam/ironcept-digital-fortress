@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Shield, Phone, Mail } from "lucide-react";
+import { ArrowRight, Shield, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 
 export function CTASection() {
   return (
@@ -38,9 +39,9 @@ export function CTASection() {
               </Link>
             </Button>
             <Button variant="cyber-outline" size="xl" asChild>
-              <a href="tel:+971556022188">
-                <Phone className="w-5 h-5 mr-2" />
-                Call Us Now
+              <a href="https://wa.me/971556022188" target="_blank" rel="noopener noreferrer">
+                <WhatsAppIcon className="w-5 h-5 mr-2" />
+                WhatsApp Us
               </a>
             </Button>
           </div>
@@ -52,8 +53,8 @@ export function CTASection() {
               <span>info@ironcept.com</span>
             </a>
             <span className="hidden sm:block">|</span>
-            <a href="tel:+971556022188" className="flex items-center gap-2 hover:text-primary transition-colors">
-              <Phone className="w-4 h-4" />
+            <a href="https://wa.me/971556022188" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-primary transition-colors">
+              <WhatsAppIcon className="w-4 h-4" />
               <span>+971 556022188</span>
             </a>
           </div>
