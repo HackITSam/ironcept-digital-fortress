@@ -54,9 +54,9 @@ export function Footer() {
                 <Phone className="w-4 h-4" />
                 <span>+971 556022188</span>
               </a>
-              <div className="flex items-center gap-3 text-muted-foreground">
-                <MapPin className="w-4 h-4" />
-                <span>Global Operations</span>
+              <div className="flex items-start gap-3 text-muted-foreground">
+                <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
+                <span>Burj Al Salaam, Office 703/704<br />Sheikh Zayed Road<br />Dubai, United Arab Emirates</span>
               </div>
             </div>
 
