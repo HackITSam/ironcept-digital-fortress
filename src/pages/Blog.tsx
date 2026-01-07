@@ -1,76 +1,12 @@
 import { Layout } from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Calendar, Clock, User, Tag } from "lucide-react";
-
-const blogPosts = [
-  {
-    id: 1,
-    title: "Understanding Zero-Day Vulnerabilities: Detection and Prevention",
-    excerpt: "Learn about zero-day exploits, how attackers leverage them, and the best strategies to protect your organization from these emerging threats.",
-    category: "Threat Intelligence",
-    author: "Alex Chen",
-    date: "Dec 10, 2024",
-    readTime: "8 min read",
-    featured: true,
-  },
-  {
-    id: 2,
-    title: "The Complete Guide to Ransomware Incident Response",
-    excerpt: "A step-by-step guide on how to respond to a ransomware attack, from initial detection to recovery and post-incident analysis.",
-    category: "Incident Response",
-    author: "Sarah Mitchell",
-    date: "Dec 5, 2024",
-    readTime: "12 min read",
-    featured: true,
-  },
-  {
-    id: 3,
-    title: "Mobile App Security: Common Vulnerabilities in Android & iOS",
-    excerpt: "Discover the most common security flaws in mobile applications and how developers can build more secure apps.",
-    category: "VAPT",
-    author: "David Kumar",
-    date: "Nov 28, 2024",
-    readTime: "10 min read",
-    featured: false,
-  },
-  {
-    id: 4,
-    title: "Digital Forensics in the Cloud Era: Challenges and Solutions",
-    excerpt: "Explore the unique challenges of conducting digital forensics in cloud environments and modern investigation techniques.",
-    category: "Digital Forensics",
-    author: "Maria Santos",
-    date: "Nov 20, 2024",
-    readTime: "9 min read",
-    featured: false,
-  },
-  {
-    id: 5,
-    title: "SOC 2 Compliance: A Practical Implementation Guide",
-    excerpt: "Everything you need to know about achieving SOC 2 compliance, from understanding the framework to implementation best practices.",
-    category: "Compliance",
-    author: "Maria Santos",
-    date: "Nov 15, 2024",
-    readTime: "15 min read",
-    featured: false,
-  },
-  {
-    id: 6,
-    title: "Advanced Persistent Threats: How APT Groups Operate",
-    excerpt: "An in-depth look at how sophisticated threat actors conduct long-term cyber operations against high-value targets.",
-    category: "Threat Intelligence",
-    author: "Sarah Mitchell",
-    date: "Nov 8, 2024",
-    readTime: "11 min read",
-    featured: false,
-  },
-];
-
-const categories = ["All", "Threat Intelligence", "Incident Response", "VAPT", "Digital Forensics", "Compliance"];
+import { ArrowRight, Calendar, Clock, User } from "lucide-react";
+import { blogPosts, categories } from "@/data/blogData";
 
 const Blog = () => {
-  const featuredPosts = blogPosts.filter(post => post.featured);
-  const regularPosts = blogPosts.filter(post => !post.featured);
+  const featuredPosts = blogPosts.filter((post) => post.featured);
+  const regularPosts = blogPosts.filter((post) => !post.featured);
 
   return (
     <Layout>
@@ -78,7 +14,7 @@ const Blog = () => {
       <section className="pt-32 pb-16 relative overflow-hidden">
         <div className="absolute inset-0 cyber-grid opacity-20" />
         <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-secondary/10 blur-[150px] rounded-full" />
-        
+
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 border border-primary/30 text-primary text-sm font-medium mb-6">
@@ -88,8 +24,8 @@ const Blog = () => {
               Security <span className="gradient-text">Blog</span>
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Stay informed with the latest cybersecurity insights, threat intelligence, 
-              and best practices from Ironcept's security experts.
+              Stay informed with the latest cybersecurity insights, threat
+              intelligence, and best practices from Ironcept's security experts.
             </p>
           </div>
         </div>
@@ -126,12 +62,13 @@ const Blog = () => {
                 to={`/blog/${post.id}`}
                 className="group p-6 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-300"
               >
-                {/* Image Placeholder */}
-                <div className="aspect-video rounded-xl bg-gradient-to-br from-primary/20 to-secondary/20 mb-6 overflow-hidden relative">
-                  <div className="absolute inset-0 cyber-grid opacity-30" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <Tag className="w-12 h-12 text-primary group-hover:scale-110 transition-transform duration-300" />
-                  </div>
+                {/* Image */}
+                <div className="aspect-video rounded-xl overflow-hidden mb-6">
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
 
                 {/* Category */}
@@ -181,6 +118,15 @@ const Blog = () => {
                 to={`/blog/${post.id}`}
                 className="group p-5 rounded-2xl bg-background border border-border hover:border-primary/30 transition-all duration-300"
               >
+                {/* Image */}
+                <div className="aspect-video rounded-xl overflow-hidden mb-4">
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+
                 {/* Category */}
                 <span className="inline-block px-3 py-1 rounded-full bg-primary/10 border border-primary/30 text-primary text-xs font-medium mb-3">
                   {post.category}
@@ -219,9 +165,12 @@ const Blog = () => {
       <section className="py-20 relative">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center p-8 rounded-2xl bg-gradient-to-br from-primary/10 to-secondary/10 border border-primary/20">
-            <h2 className="text-2xl font-bold mb-4">Subscribe to Our Newsletter</h2>
+            <h2 className="text-2xl font-bold mb-4">
+              Subscribe to Our Newsletter
+            </h2>
             <p className="text-muted-foreground mb-6">
-              Get the latest security insights and threat intelligence delivered to your inbox.
+              Get the latest security insights and threat intelligence delivered
+              to your inbox.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <input
