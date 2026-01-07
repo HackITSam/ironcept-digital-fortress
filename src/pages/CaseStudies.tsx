@@ -3,6 +3,11 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, Building, FileSearch, TrendingUp } from "lucide-react";
 
+import caseStudyFinance from "@/assets/case-study-finance.jpg";
+import caseStudyHealthcare from "@/assets/case-study-healthcare.jpg";
+import caseStudyCloud from "@/assets/case-study-cloud.jpg";
+import caseStudyForensics from "@/assets/case-study-forensics.jpg";
+
 const caseStudies = [
   {
     id: 1,
@@ -18,7 +23,7 @@ const caseStudies = [
       "Zero security incidents in 12 months post-engagement",
       "40% reduction in security operational costs",
     ],
-    image: "from-primary/20 to-secondary/20",
+    image: caseStudyFinance,
   },
   {
     id: 2,
@@ -34,7 +39,7 @@ const caseStudies = [
       "Attack vector identified and remediated",
       "Security posture strengthened to prevent recurrence",
     ],
-    image: "from-destructive/20 to-destructive/10",
+    image: caseStudyHealthcare,
   },
   {
     id: 3,
@@ -50,7 +55,7 @@ const caseStudies = [
       "Automated security monitoring implemented",
       "Successful IPO security due diligence completed",
     ],
-    image: "from-accent/20 to-primary/20",
+    image: caseStudyCloud,
   },
   {
     id: 4,
@@ -66,7 +71,7 @@ const caseStudies = [
       "Legal action supported with expert testimony",
       "Security controls implemented to prevent future incidents",
     ],
-    image: "from-warning/20 to-warning/10",
+    image: caseStudyForensics,
   },
 ];
 
@@ -126,11 +131,18 @@ const CaseStudies = () => {
               >
                 {/* Visual */}
                 <div className={`${index % 2 === 1 ? 'lg:order-2' : ''}`}>
-                  <div className={`aspect-video rounded-2xl bg-gradient-to-br ${study.image} border border-border flex items-center justify-center relative overflow-hidden group`}>
-                    <div className="absolute inset-0 cyber-grid opacity-30" />
-                    <div className="relative z-10 p-8 text-center">
-                      <study.icon className="w-20 h-20 text-primary mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
-                      <div className="text-sm font-medium text-primary">{study.category}</div>
+                  <div className="aspect-video rounded-2xl border border-border overflow-hidden relative group">
+                    <img 
+                      src={study.image} 
+                      alt={study.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <div className="flex items-center gap-2">
+                        <study.icon className="w-5 h-5 text-primary" />
+                        <span className="text-sm font-medium text-primary">{study.category}</span>
+                      </div>
                     </div>
                   </div>
                 </div>
