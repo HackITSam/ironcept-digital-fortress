@@ -7,8 +7,13 @@ import {
   Shield, Bug, FileSearch, HardDrive, ClipboardCheck, Activity,
   Globe, Smartphone, Cloud, Lock, Server, Wifi, Target, Eye,
   Database, Code, Mail, Brain, AlertTriangle, RefreshCw,
-  ArrowRight, CheckCircle, Settings
+  ArrowRight, CheckCircle, Settings, Laptop, Monitor, Layers,
+  Palette, Zap, ShoppingCart, Cog
 } from "lucide-react";
+
+import softwareDevImg from "@/assets/service-software-dev.jpg";
+import webDevImg from "@/assets/service-web-dev.jpg";
+import mobileDevImg from "@/assets/service-mobile-dev.jpg";
 
 const vaptServices = [
   { 
@@ -476,6 +481,173 @@ const Services = () => {
                 {item}
               </span>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Software Development Section */}
+      <section id="software-development" className="py-20 relative scroll-mt-24">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center gap-4 mb-4">
+            <div className="w-14 h-14 rounded-xl bg-accent/20 flex items-center justify-center">
+              <Laptop className="w-7 h-7 text-accent-foreground" />
+            </div>
+            <div>
+              <h2 className="text-3xl font-bold">Software & App Development</h2>
+              <p className="text-muted-foreground">Secure, scalable, and innovative solutions</p>
+            </div>
+          </div>
+          <p className="text-muted-foreground mb-12 max-w-4xl">
+            Beyond security, Ironcept offers comprehensive software development services. 
+            Our development team builds secure-by-design applications that meet your business needs 
+            while adhering to the highest security standards. Every solution we build undergoes 
+            rigorous security testing before deployment.
+          </p>
+
+          {/* Custom Software Development */}
+          <div className="mb-16">
+            <div className="grid lg:grid-cols-2 gap-8 items-center mb-12">
+              <div className="order-2 lg:order-1">
+                <div className="flex items-center gap-3 mb-4">
+                  <Code className="w-6 h-6 text-primary" />
+                  <h3 className="text-2xl font-bold">Custom Software Development</h3>
+                </div>
+                <p className="text-muted-foreground mb-6 leading-relaxed">
+                  We design and develop custom software solutions tailored to your unique business 
+                  requirements. From enterprise applications to specialized tools, our team delivers 
+                  robust, scalable, and maintainable software that drives your business forward.
+                </p>
+                <ul className="space-y-3 mb-6">
+                  {[
+                    "Enterprise application development",
+                    "Cloud-native solutions (AWS, Azure, GCP)",
+                    "API development and integration",
+                    "Microservices architecture",
+                    "Database design and optimization",
+                    "DevSecOps implementation"
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-primary mt-0.5" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="order-1 lg:order-2">
+                <div className="rounded-2xl overflow-hidden border border-border">
+                  <img 
+                    src={softwareDevImg} 
+                    alt="Custom Software Development" 
+                    className="w-full h-64 lg:h-80 object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Web Application Development */}
+          <div className="mb-16">
+            <div className="grid lg:grid-cols-2 gap-8 items-center mb-12">
+              <div>
+                <div className="rounded-2xl overflow-hidden border border-border">
+                  <img 
+                    src={webDevImg} 
+                    alt="Web Application Development" 
+                    className="w-full h-64 lg:h-80 object-cover"
+                  />
+                </div>
+              </div>
+              <div>
+                <div className="flex items-center gap-3 mb-4">
+                  <Monitor className="w-6 h-6 text-secondary" />
+                  <h3 className="text-2xl font-bold">Web Application Development</h3>
+                </div>
+                <p className="text-muted-foreground mb-6 leading-relaxed">
+                  Create stunning, high-performance web applications that deliver exceptional user 
+                  experiences. We build responsive, accessible, and SEO-optimized websites and web 
+                  applications using modern technologies and frameworks.
+                </p>
+                <div className="grid grid-cols-2 gap-4">
+                  {[
+                    { icon: Layers, title: "Full-Stack Development", desc: "React, Node.js, Python, .NET" },
+                    { icon: Palette, title: "UI/UX Design", desc: "Modern, intuitive interfaces" },
+                    { icon: Zap, title: "Performance Optimization", desc: "Fast loading, smooth UX" },
+                    { icon: ShoppingCart, title: "E-Commerce Solutions", desc: "Custom online stores" },
+                    { icon: Lock, title: "Secure Development", desc: "OWASP best practices" },
+                    { icon: Cog, title: "CMS Development", desc: "Custom content management" }
+                  ].map((item) => (
+                    <div key={item.title} className="p-4 rounded-xl bg-card border border-border">
+                      <item.icon className="w-5 h-5 text-secondary mb-2" />
+                      <h4 className="font-semibold text-sm mb-1">{item.title}</h4>
+                      <p className="text-muted-foreground text-xs">{item.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile App Development */}
+          <div className="mb-12">
+            <div className="grid lg:grid-cols-2 gap-8 items-center">
+              <div className="order-2 lg:order-1">
+                <div className="flex items-center gap-3 mb-4">
+                  <Smartphone className="w-6 h-6 text-success" />
+                  <h3 className="text-2xl font-bold">Mobile App Development</h3>
+                </div>
+                <p className="text-muted-foreground mb-6 leading-relaxed">
+                  Build native and cross-platform mobile applications that engage users and 
+                  drive business growth. Our mobile development team creates intuitive, 
+                  feature-rich apps for iOS and Android platforms.
+                </p>
+                <div className="p-6 rounded-2xl bg-card border border-border mb-6">
+                  <h4 className="font-semibold mb-4">Our Mobile Development Expertise</h4>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <span className="text-sm font-medium text-success">iOS Development</span>
+                      <ul className="text-sm text-muted-foreground mt-2 space-y-1">
+                        <li>• Swift & SwiftUI</li>
+                        <li>• iOS SDK integration</li>
+                        <li>• App Store deployment</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <span className="text-sm font-medium text-success">Android Development</span>
+                      <ul className="text-sm text-muted-foreground mt-2 space-y-1">
+                        <li>• Kotlin & Java</li>
+                        <li>• Material Design</li>
+                        <li>• Play Store deployment</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {["React Native", "Flutter", "Swift", "Kotlin", "Firebase", "Push Notifications", "Offline Mode", "Analytics"].map((tech) => (
+                    <span key={tech} className="px-3 py-1.5 rounded-full bg-success/10 border border-success/30 text-success text-xs">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <div className="order-1 lg:order-2">
+                <div className="rounded-2xl overflow-hidden border border-border">
+                  <img 
+                    src={mobileDevImg} 
+                    alt="Mobile App Development" 
+                    className="w-full h-64 lg:h-80 object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex justify-center">
+            <Button variant="cyber" asChild>
+              <Link to="/contact">
+                Discuss Your Project
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
