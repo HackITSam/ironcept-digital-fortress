@@ -1,74 +1,42 @@
-# Welcome to your Lovable project
+# Ironcept - Cybersecurity & Digital Forensics
 
-## Project info
+Enterprise-grade cybersecurity and digital forensics solutions. Protecting your digital assets with cutting-edge technology and expertise.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## About Ironcept
 
-## How can I edit this code?
+Ironcept provides comprehensive security services including:
 
-There are several ways of editing your application.
+- **Vulnerability Assessment & Penetration Testing (VAPT)** - Web, Mobile, API, Network, Cloud & IoT security testing
+- **Red Teaming & Adversary Simulation** - Real-world attack simulations
+- **Digital Forensics & Incident Response** - Expert forensic analysis and breach handling
+- **Data Recovery Services** - Professional recovery for all storage media
+- **Compliance & Security Consulting** - ISO 27001, PCI-DSS, SOC 2, and more
+- **Software & App Development** - Secure web and mobile application development
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Bun installed - [install Bun](https://bun.sh/docs/installation)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-bun install
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-bun run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
+## Technologies Used
 
 This project is built with:
 
-- Bun 1.3.4
-- Vite 7.2.7
+- React 19
 - TypeScript
-- React 19.2.1
-- shadcn-ui
+- Vite
 - Tailwind CSS
+- shadcn/ui
 
-## How can I deploy this project?
+## Getting Started
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+```sh
+# Install dependencies
+bun install
 
-## Can I connect a custom domain to my Lovable project?
+# Start the development server
+bun run dev
+```
 
-Yes, you can!
+## Contact
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+For security assessments and consultations, visit our website or contact our team.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+---
+
+© 2024 Ironcept. All rights reserved.
